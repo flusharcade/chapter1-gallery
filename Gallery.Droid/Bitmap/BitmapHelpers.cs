@@ -6,7 +6,10 @@
 
 namespace Gallery.Droid
 {
+	using System;
+
 	using Android.Graphics;
+	using Android.Widget;
 
 	/// <summary>
 	/// Bitmap helpers.
@@ -40,6 +43,25 @@ namespace Gallery.Droid
 			}
 
 			return (int)inSampleSize;
+		}
+
+		public static async void CreateBitmap(ImageView imageView, byte[] imageData)
+		{
+			try
+			{
+				if (imageData != null) 
+				{
+					var bm = await BitmapFactory.DecodeByteArrayAsync(imageData, 0, imageData.Length);
+					if (bm != null) 
+					{
+						imageView.SetImageBitmap(bm);
+					}
+				}
+			}
+			catch (Exception e) 
+			{
+				Console.WriteLine ("Bitmap creation failed: " + e);
+			}
 		}
 	}
 }

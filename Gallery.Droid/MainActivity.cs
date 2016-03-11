@@ -3,6 +3,7 @@
 //   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
+using Android.Content;
 
 namespace Gallery.Droid
 {
@@ -36,6 +37,16 @@ namespace Gallery.Droid
 
 			var listView = this.FindViewById<ListView> (Resource.Id.listView);
 			listView.Adapter = adapter;
+
+			listView.ItemClick += (object sender, AdapterView.ItemClickEventArgs e) => 
+			{
+				var galleryItem = adapter.GetItemByPosition (e.Position);
+				var photoActivity = new Intent(this, typeof(PhotoActivity));
+				photoActivity.PutExtra ("ImageData", galleryItem.ImageData);
+				photoActivity.PutExtra ("Title", galleryItem.Title);
+				photoActivity.PutExtra ("Date", galleryItem.Date);
+				StartActivity(photoActivity);
+			};
 		}
 	}
 }

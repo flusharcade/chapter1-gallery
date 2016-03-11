@@ -1,4 +1,4 @@
-﻿<Properties StartupItem="Gallery.iOS/Gallery.iOS.csproj" RefactoringSettings.EnableRefactorings="True">
+﻿<Properties StartupItem="Gallery.Droid/Gallery.Droid.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.9.0" />
   <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -13,4 +13,5 @@
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Gallery.Droid AndroidDesignerPreferredDevice="Nexus 4" />
 </Properties>

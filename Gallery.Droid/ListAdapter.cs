@@ -36,10 +36,15 @@ namespace Gallery.Droid
 				this.items.Add (galleryitem);
 			}
 		}
-
+			
 		public override Java.Lang.Object GetItem (int position)
 		{
 			return null;
+		}
+
+		public GalleryItem GetItemByPosition (int position)
+		{
+			return this.items[position];
 		}
 
 		public override long GetItemId(int position)
@@ -67,7 +72,7 @@ namespace Gallery.Droid
 
 			// set image
 			var imageView = view.FindViewById<ImageView> (Resource.Id.image);
-			this.createBitmap (imageView, this.items [position].ImageData);
+			BitmapHelpers.CreateBitmap (imageView, this.items [position].ImageData);
 
 			// set labels
 			var titleTextView = view.FindViewById<TextView> (Resource.Id.title);
@@ -76,25 +81,6 @@ namespace Gallery.Droid
 			dateTextView.Text = this.items[position].Date;
 
 			return view;
-		}
-
-		private async void createBitmap(ImageView imageView, byte[] imageData)
-		{
-			try
-			{
-				if (imageData != null) 
-				{
-					var bm = await BitmapFactory.DecodeByteArrayAsync(imageData, 0, imageData.Length);
-					if (bm != null) 
-					{
-						imageView.SetImageBitmap(bm);
-					}
-				}
-			}
-			catch (Exception e) 
-			{
-				Console.WriteLine ("Bitmap creation failed: " + e);
-			}
 		}
 	}
 }

@@ -862,6 +862,9 @@ namespace Gallery.Droid
 			// aapt resource value: 0x7f0a003c
 			public const int date = 2131361852;
 			
+			// aapt resource value: 0x7f0a0040
+			public const int date_photo = 2131361856;
+			
 			// aapt resource value: 0x7f0a0028
 			public const int default_activity_button = 2131361832;
 			
@@ -900,6 +903,9 @@ namespace Gallery.Droid
 			
 			// aapt resource value: 0x7f0a0027
 			public const int image = 2131361831;
+			
+			// aapt resource value: 0x7f0a003e
+			public const int image_photo = 2131361854;
 			
 			// aapt resource value: 0x7f0a0006
 			public const int listMode = 2131361798;
@@ -984,6 +990,9 @@ namespace Gallery.Droid
 			
 			// aapt resource value: 0x7f0a002b
 			public const int title = 2131361835;
+			
+			// aapt resource value: 0x7f0a003f
+			public const int title_photo = 2131361855;
 			
 			// aapt resource value: 0x7f0a0020
 			public const int top_action_bar = 2131361824;
@@ -1105,7 +1114,10 @@ namespace Gallery.Droid
 			public const int Main = 2130968601;
 			
 			// aapt resource value: 0x7f04001a
-			public const int support_simple_spinner_dropdown_item = 2130968602;
+			public const int Photo = 2130968602;
+			
+			// aapt resource value: 0x7f04001b
+			public const int support_simple_spinner_dropdown_item = 2130968603;
 			
 			static Layout()
 			{

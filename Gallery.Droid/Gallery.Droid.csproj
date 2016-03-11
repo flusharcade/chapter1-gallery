@@ -61,6 +61,7 @@
     <Compile Include="ListAdapter.cs" />
     <Compile Include="ImageHandler.cs" />
     <Compile Include="Bitmap\BitmapHelpers.cs" />
+    <Compile Include="PhotoActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -77,6 +78,7 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\layout\CustomCell.xml" />
+    <AndroidResource Include="Resources\layout\Photo.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

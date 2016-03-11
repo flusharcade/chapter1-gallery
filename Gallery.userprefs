@@ -1,12 +1,6 @@
 ﻿<Properties StartupItem="Gallery.iOS/Gallery.iOS.csproj" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="Android.0fa398fd" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Gallery.Droid/MainActivity.cs">
-    <Files>
-      <File FileName="Gallery.Droid/ImageHandler.cs" Line="59" Column="6" />
-      <File FileName="Gallery.Droid/ListAdapter.cs" Line="90" Column="1" />
-      <File FileName="Gallery.Droid/MainActivity.cs" Line="32" Column="24" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.9.0" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/mww121/Projects/Gallery.iOS/Gallery.Droid/ListAdapter.cs" line="98" column="1" />

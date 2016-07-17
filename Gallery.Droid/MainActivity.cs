@@ -14,7 +14,7 @@ namespace Gallery.Droid
 	/// <summary>
 	/// Main activity.
 	/// </summary>
-	[Activity (Label = "Gallery.Droid", MainLauncher = true, Icon = "@mipmap/icon")]
+	[Activity (Label = "Gallery.Droid", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
 		#region Private Properties

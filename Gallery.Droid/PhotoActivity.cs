@@ -13,7 +13,7 @@ namespace Gallery.Droid
 	/// <summary>
 	/// Main activity.
 	/// </summary>
-	[Activity (Label = "Gallery.Droid", Icon = "@mipmap/icon")]
+	[Activity (Label = "Gallery.Droid", Icon = "@drawable/icon")]
 	public class PhotoActivity : Activity
 	{
 		#region Protected Methods

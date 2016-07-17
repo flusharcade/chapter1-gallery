@@ -6,15 +6,11 @@
 
 namespace Gallery.Droid
 {
-	using System;
-	using System.Linq;
 	using System.Collections.Generic;
-	using System.IO;
 
 	using Android.App;
 	using Android.Widget;
 	using Android.Views;
-	using Android.Graphics;
 
 	using Gallery.Shared;
 
@@ -23,35 +19,75 @@ namespace Gallery.Droid
 	/// </summary>
 	public class ListAdapter : BaseAdapter
 	{
-		private List<GalleryItem> items;
-		private Activity context;
+		#region Private Properties
 
+		/// <summary>
+		/// The items.
+		/// </summary>
+		private List<GalleryItem> items;
+
+		/// <summary>
+		/// The context.
+		/// </summary>
+		private Activity _context;
+
+		#endregion
+
+		#region Constructors
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="T:Gallery.Droid.ListAdapter"/> class.
+		/// </summary>
+		/// <param name="context">Context.</param>
 		public ListAdapter(Activity context) : base()
 		{
-			this.context = context;
-			this.items = new List<GalleryItem>();
+			_context = context;
+			items = new List<GalleryItem>();
 
-			foreach (var galleryitem in ImageHandler.GetFiles (this.context))
+			foreach (var galleryitem in ImageHandler.GetFiles (context))
 			{
-				this.items.Add (galleryitem);
+				items.Add (galleryitem);
 			}
 		}
-			
+
+		#endregion
+
+		#region Public Methods
+
+		/// <summary>
+		/// Gets the item.
+		/// </summary>
+		/// <returns>The item.</returns>
+		/// <param name="position">Position.</param>
 		public override Java.Lang.Object GetItem (int position)
 		{
 			return null;
 		}
 
+		/// <summary>
+		/// Gets the item by position.
+		/// </summary>
+		/// <returns>The item by position.</returns>
+		/// <param name="position">Position.</param>
 		public GalleryItem GetItemByPosition (int position)
 		{
-			return this.items[position];
+			return items[position];
 		}
 
+		/// <summary>
+		/// Gets the item identifier.
+		/// </summary>
+		/// <returns>The item identifier.</returns>
+		/// <param name="position">Position.</param>
 		public override long GetItemId(int position)
 		{
 			return position;
 		}
 
+		/// <summary>
+		/// Gets the count.
+		/// </summary>
+		/// <value>The count.</value>
 		public override int Count
 		{
 			get 
@@ -60,6 +96,13 @@ namespace Gallery.Droid
 			} 
 		}
 
+		/// <summary>
+		/// Gets the view.
+		/// </summary>
+		/// <returns>The view.</returns>
+		/// <param name="position">Position.</param>
+		/// <param name="convertView">Convert view.</param>
+		/// <param name="parent">Parent.</param>
 		public override View GetView(int position, View convertView, ViewGroup parent)
 		{
 			View view = convertView; // re-use an existing view, if one is available
@@ -67,21 +110,22 @@ namespace Gallery.Droid
 			if (view == null)
 			{ 
 				// otherwise create a new one
-				view = context.LayoutInflater.Inflate(Resource.Layout.CustomCell, null);
+				view = _context.LayoutInflater.Inflate(Resource.Layout.CustomCell, null);
 			}
 
 			// set image
 			var imageView = view.FindViewById<ImageView> (Resource.Id.image);
-			BitmapHelpers.CreateBitmap (imageView, this.items [position].ImageData);
+			BitmapHelpers.CreateBitmap (imageView, items [position].ImageData);
 
 			// set labels
 			var titleTextView = view.FindViewById<TextView> (Resource.Id.title);
-			titleTextView.Text = this.items[position].Title;
+			titleTextView.Text = items[position].Title;
 			var dateTextView = view.FindViewById<TextView> (Resource.Id.date);
-			dateTextView.Text = this.items[position].Date;
+			dateTextView.Text = items[position].Date;
 
 			return view;
 		}
+
+		#endregion
 	}
 }
-

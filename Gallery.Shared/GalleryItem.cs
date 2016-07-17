@@ -6,13 +6,13 @@
 
 namespace Gallery.Shared
 {
-	using System;
-
 	/// <summary>
 	/// Gallery item.
 	/// </summary>
 	public class GalleryItem
 	{
+		#region Public Properties
+
 		/// <summary>
 		/// The image data.
 		/// </summary>
@@ -33,12 +33,6 @@ namespace Gallery.Shared
 		/// </summary>
 		public string Date;
 
-		/// <summary>
-		/// Initializes a new instance of the <see cref="Gallery.Shared.GalleryItem"/> class.
-		/// </summary>
-		public GalleryItem ()
-		{
-		}
+		#endregion
 	}
 }
-

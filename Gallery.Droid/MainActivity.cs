@@ -3,13 +3,13 @@
 //   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-using Android.Content;
 
 namespace Gallery.Droid
 {
 	using Android.App;
 	using Android.Widget;
 	using Android.OS;
+	using Android.Content;
 
 	/// <summary>
 	/// Main activity.
@@ -17,10 +17,16 @@ namespace Gallery.Droid
 	[Activity (Label = "Gallery.Droid", MainLauncher = true, Icon = "@mipmap/icon")]
 	public class MainActivity : Activity
 	{
+		#region Private Properties
+
 		/// <summary>
 		/// The adapter.
 		/// </summary>
 		private ListAdapter adapter;
+
+		#endregion
+
+		#region Protected Methods
 
 		/// <summary>
 		/// Raises the create event.
@@ -33,9 +39,9 @@ namespace Gallery.Droid
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
-			this.adapter = new ListAdapter (this);
+			adapter = new ListAdapter (this);
 
-			var listView = this.FindViewById<ListView> (Resource.Id.listView);
+			var listView = FindViewById<ListView> (Resource.Id.listView);
 			listView.Adapter = adapter;
 
 			listView.ItemClick += (object sender, AdapterView.ItemClickEventArgs e) => 
@@ -48,5 +54,7 @@ namespace Gallery.Droid
 				StartActivity(photoActivity);
 			};
 		}
+
+		#endregion
 	}
 }

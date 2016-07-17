@@ -16,6 +16,8 @@ namespace Gallery.Droid
 	/// </summary>
 	public static class BitmapHelpers
 	{
+		#region Public Static Methods
+
 		/// <summary>
 		/// Calculates the size of the in sample.
 		/// </summary>
@@ -45,6 +47,12 @@ namespace Gallery.Droid
 			return (int)inSampleSize;
 		}
 
+		/// <summary>
+		/// Creates the bitmap.
+		/// </summary>
+		/// <returns>The bitmap.</returns>
+		/// <param name="imageView">Image view.</param>
+		/// <param name="imageData">Image data.</param>
 		public static async void CreateBitmap(ImageView imageView, byte[] imageData)
 		{
 			try
@@ -64,5 +72,6 @@ namespace Gallery.Droid
 			}
 		}
 	}
-}
 
+	#endregion
+}

@@ -16,6 +16,8 @@ namespace Gallery.Droid
 	[Activity (Label = "Gallery.Droid", Icon = "@mipmap/icon")]
 	public class PhotoActivity : Activity
 	{
+		#region Protected Methods
+
 		/// <summary>
 		/// Raises the create event.
 		/// </summary>
@@ -32,14 +34,16 @@ namespace Gallery.Droid
 			var date = Intent.GetStringExtra ("Date") ?? string.Empty;
 
 			// set image
-			var imageView = this.FindViewById<ImageView> (Resource.Id.image_photo);
+			var imageView = FindViewById<ImageView> (Resource.Id.image_photo);
 			BitmapHelpers.CreateBitmap (imageView, imageData);
 
 			// set labels
-			var titleTextView = this.FindViewById<TextView> (Resource.Id.title_photo);
+			var titleTextView = FindViewById<TextView> (Resource.Id.title_photo);
 			titleTextView.Text = title;
-			var dateTextView = this.FindViewById<TextView> (Resource.Id.date_photo);
+			var dateTextView = FindViewById<TextView> (Resource.Id.date_photo);
 			dateTextView.Text = date;
 		}
+
+		#endregion
 	}
 }

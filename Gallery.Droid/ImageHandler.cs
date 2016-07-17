@@ -6,11 +6,9 @@
 
 namespace Gallery.Droid
 {
-	using System;
 	using System.Collections.Generic;
 	using System.IO;
 
-	using Android.Database;
 	using Android.Content;
 	using Android.Provider;
 	using Android.Graphics;
@@ -22,6 +20,8 @@ namespace Gallery.Droid
 	/// </summary>
 	public static class ImageHandler
 	{
+		#region Public Static Methods
+
 		/// <summary>
 		/// Gets the files.
 		/// </summary>
@@ -53,7 +53,7 @@ namespace Gallery.Droid
 
 				var url = cursor.GetString(columnIndex);
 
-				var imageData = createCompressedImageDataFromBitmap (url);
+				var imageData = CreateCompressedImageDataFromBitmap (url);
 
 				yield return new GalleryItem () 
 				{
@@ -65,12 +65,16 @@ namespace Gallery.Droid
 			}
 		}
 
+		#endregion
+
+		#region Private Static Methods
+
 		/// <summary>
 		/// Creates the compressed image data from bitmap.
 		/// </summary>
 		/// <returns>The compressed image data from bitmap.</returns>
 		/// <param name="url">URL.</param>
-		private static byte[] createCompressedImageDataFromBitmap(string url)
+		private static byte[] CreateCompressedImageDataFromBitmap(string url)
 		{
 			BitmapFactory.Options options = new BitmapFactory.Options ();
 			// This makes sure bitmap is not loaded into memory
@@ -93,6 +97,7 @@ namespace Gallery.Droid
 			bm.Compress (Bitmap.CompressFormat.Jpeg, 80, stream);
 			return stream.ToArray ();
 		}
+
+		#endregion
 	}
 }
-

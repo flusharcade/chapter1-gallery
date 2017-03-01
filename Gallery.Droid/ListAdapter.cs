@@ -105,7 +105,8 @@ namespace Gallery.Droid
 		/// <param name="parent">Parent.</param>
 		public override View GetView(int position, View convertView, ViewGroup parent)
 		{
-			View view = convertView; // re-use an existing view, if one is available
+			// re-use an existing view, if one is available
+			View view = convertView;
 
 			if (view == null)
 			{ 

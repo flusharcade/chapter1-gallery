@@ -1,5 +1,12 @@
-﻿<Properties StartupItem="Gallery.iOS/Gallery.iOS.csproj" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workbench />
+﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupConfiguration="{4365F8BB-E572-4C02-9DDB-D0F4E1BC6746}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Gallery.Droid/ImageHandler.cs">
+    <Files>
+      <File FileName="Gallery.Droid/ImageHandler.cs" Line="1" Column="1" />
+      <File FileName="Gallery.Droid/ListAdapter.cs" Line="108" Column="29" />
+      <File FileName="Gallery.Droid/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="Gallery.Droid/PhotoActivity.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
@@ -13,6 +20,7 @@
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Gallery.Droid PreferredExecutionTarget="Android.TA38503PQ6" />
-  <MonoDevelop.Ide.ItemProperties.Gallery.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.A10AC0B6-78D2-48A4-92EF-01D011AFA406" />
+  <MonoDevelop.Ide.ItemProperties.Gallery.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Gallery.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.31753E43-9E5B-48B9-A4A7-C4CEF7B2C947" />
 </Properties>
